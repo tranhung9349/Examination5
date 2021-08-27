@@ -1,0 +1,35 @@
+<h4>Player-create works!</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form [formGroup]="playerForm" (ngSubmit)="create()" class="form-control">
+        <table class="table">
+          <tr>
+            <td>Player Name:</td>
+            <td><input class="form-control" type="text" formControlName="name"></td>
+          </tr>
+          <tr>
+            <td>Player Champ:</td>
+            <td><input class="form-control" type="text" formControlName="champ"></td>
+          </tr>
+          <tr>
+            <td>Player KDA:</td>
+            <td><input class="form-control" type="text" formControlName="kda"></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td><input class="form-control" type="text" formControlName="description"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button class="btn btn-outline-success">Create player</button></td>
+          </tr>
+        </table>
+      </form>
+      <button class="btn btn-outline-secondary" (click)="back()">Back to List</button>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+<p></p>
+<button class="btn btn-outline-success" routerLink="players/create">Create new Player</button>
+<hr>
+<table class="table">
+  <tr>
+    <th></th>
+    <th scope="col">Player Name</th>
+    <th>Champ</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let player of playerList, index as i" style="height: 3rem">
+    <td>{{i+1}}</td>
+    <td>{{player.name}}</td>
+    <td>{{player.champ}}</td>
+    <td><button class="btn btn-outline-info" routerLink='players/{{player.id}}/detail'>Detail</button></td>
+    <td><button class="btn btn-outline-info" routerLink='players/{{player.id}}/edit'>Edit</button></td>
+    <td><button class="btn btn-outline-danger" (click)="delete(player.id)">Delete</button></td>
+  </tr>
+</table>
+<hr>
